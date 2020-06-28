@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains views_results_thousands_marker.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function views_results_thousands_marker_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the views_results_thousands_marker module.
+    case 'help.page.views_results_thousands_marker':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module adds a plugin to Views Result Summary with Thousands Marker') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_views_data().
+ */
+function views_results_thousands_marker_views_data() {
+  $data['views']['views_results_thousands_marker'] = array(
+    'title' => t('Result Summary with Thousands Marker'),
+    'help' => t('Provides Global result summary with custom thousands markers.'),
+    'area' => array(
+      'id' => 'views_results_thousands_marker',
+    ),
+  );
+  return $data;
+}
