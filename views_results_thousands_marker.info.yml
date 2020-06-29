@@ -1,4 +1,4 @@
-name: 'views_results_thousands_marker'
+name: 'Views Results Thousands Marker'
 type: module
 description: 'This module adds a plugin to Views Result Summary with Thousands Marker'
 core: 8.x
